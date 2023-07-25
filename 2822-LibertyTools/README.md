@@ -103,20 +103,19 @@ The Ubuntu Linux **Workstation** VM is installed with the following softare for 
     
     On the **Workstation** tile, click the **ubuntu** screen logo to open the lab environment. 
     
-    ![](./images/media/TechZoneWorkstationLogin.png)
+    <img src="./images/media/TechZoneWorkstationLogin.png" width="150"/>
     
-
 2.  Log in with user ID `ibmdemo` and password `passw0rd`.
     
-    a.  Click the “**ibmdemo**” icon on the Ubuntu screen.
+    a.  Click **ibmdemo** on the log in screen.
 
-      ![](./images/media/ibmDemoLogin.png)
+      <img src="./images/media/ibmDemoLogin.png" width="200"/>
 
     b. Enter `passw0rd` for the password.
 
     Password: **passw0rd** (lowercase with a zero instead of the o)
  
-      ![](./images/media/ibmDemoPassword.png)
+      <img src="./images/media/ibmDemoPassword.png" width="200"/>
 
     <br/>
 	
@@ -132,104 +131,74 @@ The Ubuntu Linux **Workstation** VM is installed with the following softare for 
 
 1. The UI allows you to fit the viewing area to fit the browser window size that you are using.
 
-    ![fit to window](./images/media/FitToWindow.png)
+    <img src="./images/media/FitToWindow.png" width="250"/>
 
 
-2.  You can copy and paste text from the lab guide into the lab environment by using the clipboard in the noVNC viewer. 
+2.  You can copy and paste text from the lab guide into the lab environment by using **Send Text** clipboard. 
    
-    a. Copy the text from the lab guide that you want to paste into the lab environment
+    <img src="./images/media/CopyPaste.png" width="280"/>)
     
-    b. Click the **Clipboard** icon and **paste** the text into the noVNC clipboard
-
-    ![fit to window](./images/media/CopyPaste.png)
+    > **NOTE:** Sometimes pasting into a terminal window in the VM does not work consistently. 
     
-    c. Paste the text into the VM, such as to a terminal window, browser window, etc. 
-
-    d. Click on the **clipboard** icon again to close the clipboard
-
-    > **NOTE:** Sometimes pasting into a Terminal window in the VM does not work consistently. 
-    
-    > In this case you might try again, or open another Terminal Window and try again, or  paste the text into a **Text Editor** in the VM, and then paste it into the Terminal window in the VM. 
-
-
-3. An alternative to using the noVNC Copy / Paste option, you may consider opening the lab guide in a web browser inside of the VM. Using this method, you can easily copy / paste text from the lab guide without having to use the noVNC clipboard. 
-
-  <br>
-
-### If, at aytime during the lab, you ar asked to install updates, click CANCEL!
+    > In this case, you can try again in another terminal Window, or paste the text into a **Text Editor** in the VM, and then copy and paste into the terminal window. 
 
 |         |           |  
 | ------------- |:-------------|
-| ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>Important:</strong> <p><strong>Click CANCEL</strong>…. If, at any time during the lab, you get a pop-up asking to install updated software onto the Ubuntu VM.</p> <p>The one we experience is an update available for VS Code.</p><p><strong>CLICK CANCEL!</strong></p><p>![](./images/media/image15.png?cropResize=100,100)</p> |
+| ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>IMPORTANT:</strong> <p>If, at any time during the lab, you are prompted to install updated software onto the VM, **DO NOT install the update**. Click **Cancel**.</p> <p>These lab instructions are intended for a specific version of software, which must not be udpated at this time.</p><p>![](./images/media/image15.png?cropResize=100,100)</p> |
 
 
 ## Getting Started with Open Liberty Tools in VS Code
 
-**Liberty `dev` mode** allows you, as the developer, to focus on your
-code. When Open Liberty is running in `dev` mode, your code is
-automatically compiled and deployed to the running server, making it
-easy to iterate on your changes.
+When Liberty is running in `dev` mode, your code is automatically compiled and deployed to the running server, making it easy to iterate on your changes.
 
-In this lab, as a developer, you will experience using the **Open
-Liberty Tools** extension in **VS Code** to work with your code, run
-tests on demand, so that you can get immediate feedback on your changes.
+In this lab, you use the **Liberty Tools** extension in VS Code to run tests on demand so that you can get immediate feedback on your changes.
 
-You will also work with integrated debugging tools and attach a Java
-debugger to debug your running application.
+You also work with integrated debugging tools and attach a Java debugger to debug your running application.
 
-From a developer perspective, this is a huge gain in efficiency, as all
-these iterative inner-loop development activities occur without ever
-leaving the integrated development environment (IDE).
+From a developer perspective, this is a huge gain in efficiency, asthese iterative inner-loop development activities occur without you ever leaving the IDE.
 
 <br/>
 
-### **Review the VS Code extensions and projects pom.xm file used for this project**
+### Review the VS Code extensions and project `pom.xml` file for this project
 
-The sample application used in this lab is configured to be built with
-Maven. Every Maven-configured project contains a pom.xml file, which
-defines the project configuration, dependencies, plug-ins, and so on.
+The sample application that you use in this lab is built with Maven. Every Maven-configured project contains a `pom.xml` file, which defines the project configuration, dependencies, plug-ins, and so on.
 
-Your pom.xml file is in the root directory of the project and is
-configured to include the **liberty-maven-plugin**, which allows you to
-install applications into Open Liberty and manage the server instances.
+Your `pom.xml` file is in the root directory of the project and is configured to include the `liberty-maven-plugin`, which allows you to install applications into Liberty and manage server instances.
 
-To begin, navigate to the project directory and review the IDE
-extensions and pom.xml file that is used for the “**system”**
-microservice that is provided in the lab.
+To begin, go to the project directory and review the IDE extensions and `pom.xml` file for the `system` microservice that is provided in the lab.
 
-First, add the project folder to a VS Code Workspace
+1. First, add the project folder to a VS Code workspace.
 
-1.  Close all terminal windows and browser tabs that were used in any previous labs, if necessary.
+    a.  Close all terminal windows and browser tabs that were used in any previous labs, if necessary.
 
-
-2.  Go to the project directory and launch VS Code from the `start` folder of the project.
+    b.  Go to the project directory and launch VS Code from the `start` folder of the project.
     
-    a.  Open a terminal window and change to the following directory:
+    c.  Open a terminal window and change to the following directory:
 
         cd /home/ibmdemo/Student/labs/devmode/guide-getting-started/start
 
 
-3.  Launch VS Code using the current directory (.) as the root folder for the workspace:
+2.  Launch VS Code using the current directory (.) as the root folder for the workspace:
 
         code .
 
 
-    When the VS Code UI launches, the Explorer view is shown. The “START” folder contains the source code for the project.
+    The VS Code UI launches and displays the Explorer view. The **START** folder contains the source code for the project.
 
     ![](./images/media/image16.png)
 
     <br/>
 
-4.  Review the installed extensions in VS Code that are used for this lab.
+3.  Review the installed extensions in VS Code that are used for this lab.
     
     a.  Click the **Extensions** icon in the left navigation bar in
         VS Code.
         
     ![](./images/media/image17.png)
     
-    b.  Expand the **INSTALLED** extensions section to list the extensions that are currently installed in this environment. The notable extensions used in this lab are:
+    b.  Expand the **INSTALLED** extensions section to list the extensions that are currently installed in this environment. The notable extensions are:
         
-    -  Open Liberty Tools
+    -  Liberty Tools
     -  Tools for MicroProfile
     -  Language Support for Java
     -  Debugger for Java
@@ -243,26 +212,25 @@ First, add the project folder to a VS Code Workspace
         
     ![](./images/media/image18.png)
     
-    e.  Scroll down to the “**Requirements**” section of the Open
-        Liberty Tools details page.
+    e.  Scroll down to the **Requirements** section of the Liberty Tools details page.
         
-    Notice the requirement for “Tools for MicroProfile” to support development of Microservices that use MicroProfile APIs with   Open Liberty.
+    Notice the requirement for the Tools for MicroProfile extension for Visual Studio Code. This extension is required to support development of Microservices that use MicroProfile APIs with Liberty.
         
     ![](./images/media/image19.png)
 
 
     |         |           |  
     | ------------- |:-------------|
-    | ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>Information:</strong></p><p>The <strong>Tools for MicroProfile</strong> extension requires the components to be installed in the environment:</p><p><img src="./images/media/image20.png" /></p> |
+    | ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>Information:</strong></p><p>The Tools for MicroProfile extension requires these components to be installed in the environment:</p><p><img src="./images/media/image20.png" /></p> |
 
 
-    f.  **Close** the Open Liberty Tools Extension details page.
+    f.  Close the Liberty Tools Extension details page (click the **x** on the tab).
 
     <br/>
 
-5.  Review the **pom.xml** file used to configure and build the "system” microservice.
+4.  Review the `pom.xml` file used to configure and build the `system` microservice.
     
-    a.  Click on the **Explorer** icon ![](./images/media/image21.png) located on the left navigation bar in VS Code.
+    a.  Click the **Explorer** icon ![](./images/media/image21.png) located on the left navigation bar in VS Code.
     
     b.  Expand the **START** folder if it is not already expanded
         
@@ -277,59 +245,53 @@ First, add the project folder to a VS Code Workspace
         
     ![](./images/media/image23.png)
     
-    e.  Note the binary packaging of the Java application war file that
-        is produced from the Maven Build. The WAR file produced will be
-        named **guide-getting-started** version 1.0-SNAPSHOT.
+    e.  Note the binary packaging of the Java application WAR file that
+        is produced from the Maven Build. The WAR file is named `guide-getting-started` version `1.0-SNAPSHOT`.
         
     ![](./images/media/image24.png)
     
     f.  Default HTTP and HTTPS Ports are defined, and substituted into
-        the server.xml file
+        the `server.xml` file
         
     ![](./images/media/image25.png)
     
-    g.  The Open Liberty Tools Plugin is enabled, with a supported   version of 3.3.4
+    g.  The Liberty Tools Plugin is enabled, with a supported version of 3.3.4.
         
     ![](./images/media/image26.png)
     
-    h.  Plugin for running Tests is also added to the Maven       configuration, that leverage the testing dependencies also        defined in the pom.xml file.
+    h.  A plugin for running tests is also added to the Maven configuration, which leverages the testing dependencies defined in the `pom.xml` file.
         
     ![](./images/media/image27.png)
     
-    i.  **Close** the pom.xml file
+    i.  Close the `pom.xml` file
 
     <br/>
 
     |         |           |  
     | ------------- |:-------------|
-    | ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>Information:</strong></p><p><strong>Tip:</strong> Additional information on the liberty-maven-plugin can be found here:</p><p><a href="https://github.com/OpenLiberty/ci.maven">https://github.com/OpenLiberty/ci.maven</a></p> |
+    | ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>Information:</strong></p><p><strong>Tip:</strong> Additional information on the `liberty-maven-plugin` can be found here:</p><p><a href="https://github.com/OpenLiberty/ci.maven">https://github.com/OpenLiberty/ci.maven</a></p> |
 
     <br/>
 
 ## Using Open Liberty Tools in VS Code 
 
-In this section of the lab, you will use the **Open Liberty Tools i**n
-**VS Code** to work with your code and run tests on demand, so that you
-can get immediate feedback on your changes.
+In this section of the lab, you use the Open Liberty Tools in VS Code to run tests on demand, so that you can get immediate feedback on your changes.
 
 |         |           |  
 | ------------- |:-------------|
-| ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>Important:</strong></p><p><strong>For Open Liberty Tools</strong> (LIBERTY DEV DASHBOARD)</p><p>VS Code provides extensions for Java to support the Java language features.</p><p>VS Code for Java supports two modes.</p><ul><li><p>Lightweight mode</p></li><li><p>Standard mode</p></li></ul><p>VS Code has a default configuration called “hybrid mode” where a workspace is opened in Lightweight mode, but as needed, you are prompted to switch to Standard mode.</p><p>The <strong>Tools for MicroProfile</strong> Extension, which is required for the <strong>Open Liberty Tools</strong> extension, requires the Java workspace to be opened in “<strong>STANDARD</strong>” mode. Otherwise the LIBERTY DEV DASHBOARD will not function properly.</p><p><strong>Tip:</strong> In this lab environment, the workspace is already configured to use Standard mode.</p><p>For more details on VS Code for Java is available here: <a href="https://code.visualstudio.com/docs/java/java-project">https://code.visualstudio.com/docs/java/java-project</a></p> |
+| ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>IMPORTANT:</strong></p><p>For Liberty Tools (LIBERTY DEV DASHBOARD), VS Code provides extensions for Java to support the Java language features.</p><p>VS Code for Java supports two modes:</p><ul><li><p>Lightweight mode</p></li><li><p>Standard mode</p></li></ul><p>VS Code default configuration is called “hybrid mode” where a workspace is opened in Lightweight mode, but as needed, you are prompted to switch to Standard mode.</p><p>The Tools for MicroProfile extension, which is required for the Liberty Tools extension, requires the Java workspace to be opened in Standard mode. Otherwise, the LIBERTY DEV DASHBOARD will not function properly.</p><p><strong>Tip:</strong> In this lab environment, the workspace is already configured to use Standard mode.</p><p>More details on VS Code for Java are available here: <a href="https://code.visualstudio.com/docs/java/java-project">https://code.visualstudio.com/docs/java/java-project</a></p> |
 
 
-1.  Use the Liberty Dev Dashboard to **start** the Liberty Server in `dev` mode
+1.  Use the Liberty Dev Dashboard to start the Liberty Server in `dev` mode.
     
-    a.  In VS Code, expand the LIBERTY DEV DASHBOARD section
+    a.  In VS Code, expand the **LIBERTY DASHBOARD** section.
     
-    b.  Right-mouse click on the **guide-getting-started** Liberty
-        Server
-    
-    c.  Select **Start** from the menu to start the server
+    b.  Right-click the **guide-getting-started** Liberty Server and select **Start** from the menu to start the server.
         
     ![](./images/media/image28.png)
     
-    d.  The Terminal view opens, and you see the server log messages as
-        the server starts. When the following message appears in the Terminal, the Liberty server is started.
+    c.  The **TERMINAL** view opens in VS Code that displays the server log messages as
+        the server starts. When the following message appears, the Liberty server is started.
         
     ![](./images/media/image29.png)
 
