@@ -240,21 +240,20 @@ microservice that is provided in the lab.
 
 First, add the project folder to a VS Code Workspace
 
-1.  **Close** all **Terminal** windows and **Brower** Tabs used in any previous lab.
+1.  Close all terminal windows and browser tabs that were used in any previous labs, if necessary.
 
 
-2.  Navigate to the project directory and launch VS Code from the **start**” folder of the project.
+2.  Go to the project directory and launch VS Code from the `start` folder of the project.
     
     a.  Open a terminal window and change to the following directory:
 
         cd /home/ibmdemo/Student/labs/devmode/guide-getting-started/start
 
-    
 
-3.  Launch VS Code using the current directory as the root folder for
-    the workspace
+3.  Launch VS Code using the current directory (.) as the root folder for the workspace:
 
         code .
+
 
     When the VS Code UI launches, the Explorer view is shown. The “START” folder contains the source code for the project.
 
@@ -264,12 +263,12 @@ First, add the project folder to a VS Code Workspace
 
 4.  Review the installed extensions in VS Code that are used for this lab.
     
-    a.  Click on the **Extensions** icon in the left navigation bar in
+    a.  Click the **Extensions** icon in the left navigation bar in
         VS Code.
         
     ![](./images/media/image17.png)
     
-    b.  Expand the “INSTALLED” extensions section to list the extensions that are currently installed in this environment. The notable extensions used in this lab are:
+    b.  Expand the **INSTALLED** extensions section to list the extensions that are currently installed in this environment. The notable extensions used in this lab are:
         
     -  Open Liberty Tools
     -  Tools for MicroProfile
@@ -278,7 +277,7 @@ First, add the project folder to a VS Code Workspace
     
     <br/>
 
-    c.  Click on the “**open Liberty Tools**” extension to view its details.
+    c.  Click the **Liberty Tools** extension to view its details.
     
     d.  Notice the list of commands that are supported by the Open
         Liberty Tools extension.
