@@ -11,7 +11,7 @@ At the end of this lab you should be able to:
     applications.
 
   - Observe hot reloading of application code and configuration
-    changes by using dev mode.
+    changes by using `dev` mode.
 
 You need an estimated **60 to 90 minutes** to complete this lab.
 
@@ -23,7 +23,7 @@ You need an estimated **60 to 90 minutes** to complete this lab.
 
 ## Introduction: Liberty Tools extension for VS Code
 
-You can run Liberty dev mode from a command line while you edit your code with any text editor or IDE.
+You can run Liberty `dev` mode from a command line while you edit your code with any text editor or IDE.
 
 ![](./images/media/image3.png)
 
@@ -40,9 +40,9 @@ The Liberty Tools for VS Code extension contains the following key Features:
   - View `liberty-gradle-plugin` projects in the workspace (version
     3.0 or higher)
 
-  - Start and stop an Open Liberty Server in dev mode
+  - Start and stop an Open Liberty Server in `dev` mode
 
-  - Start an Open Liberty Server in dev mode with custom parameters
+  - Start an Open Liberty Server in `dev` mode with custom parameters
 
   - Run unit and integration tests
 
@@ -70,15 +70,15 @@ For detailed infromation about the Maven goals that are supported by the Liberty
 
 <https://github.com/OpenLiberty/ci.maven>
 
-### Interacting with dev mode
+### Interacting with `dev` mode
 
 When the Liberty Maven Plugin is specified in your `pom.xml` file, your project name is then listed under the **Liberty Dev Dashboard** in the side panel in VS Code, as shown in the screen capture.
 
-You can interact with dev mode by right-clicking your project name and selecting one of the commands that are supported by the Liberty Tools extension.
+You can interact with `dev` mode by right-clicking your project name and selecting one of the commands that are supported by the Liberty Tools extension.
 
 > ![](./images/media/image5.png)
 
-### Liberty dev mode Commands
+### Liberty `dev` mode Commands
 
 The following commands can be selected from the drop-down menu after right-clicking your project name in the **Liberty Dev Dashboard**:
 
@@ -142,7 +142,7 @@ The lab environment contains one Linux VM named **Workstation**.
 
 |         |           |  
 | ------------- |:-------------|
-| ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>IMPORTANT:</strong></p><p>Using the lab environment provided, all the required VS code extensions and dependencies have been installed for you.</p><p>This allows you to focus on the value of using the capabilities of the tools for fast, efficient inner-loop development, test, debug, of Java based applications and Microservices using Open Liberty in dev mode.</p></p> |
+| ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>IMPORTANT:</strong></p><p>Using the lab environment provided, all the required VS code extensions and dependencies have been installed for you.</p><p>This allows you to focus on the value of using the capabilities of the tools for fast, efficient inner-loop development, test, debug, of Java based applications and Microservices using Open Liberty in `dev` mode.</p></p> |
   <br/>
 
 
@@ -189,8 +189,8 @@ The lab environment contains one Linux VM named **Workstation**.
 
 ## Getting Started with Open Liberty Tools in VS Code
 
-**Liberty Dev mode** allows you, as the developer, to focus on your
-code. When Open Liberty is running in dev mode, your code is
+**Liberty `dev` mode** allows you, as the developer, to focus on your
+code. When Open Liberty is running in `dev` mode, your code is
 automatically compiled and deployed to the running server, making it
 easy to iterate on your changes.
 
@@ -341,7 +341,7 @@ can get immediate feedback on your changes.
 | ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>Important:</strong></p><p><strong>For Open Liberty Tools</strong> (LIBERTY DEV DASHBOARD)</p><p>VS Code provides extensions for Java to support the Java language features.</p><p>VS Code for Java supports two modes.</p><ul><li><p>Lightweight mode</p></li><li><p>Standard mode</p></li></ul><p>VS Code has a default configuration called “hybrid mode” where a workspace is opened in Lightweight mode, but as needed, you are prompted to switch to Standard mode.</p><p>The <strong>Tools for MicroProfile</strong> Extension, which is required for the <strong>Open Liberty Tools</strong> extension, requires the Java workspace to be opened in “<strong>STANDARD</strong>” mode. Otherwise the LIBERTY DEV DASHBOARD will not function properly.</p><p><strong>Tip:</strong> In this lab environment, the workspace is already configured to use Standard mode.</p><p>For more details on VS Code for Java is available here: <a href="https://code.visualstudio.com/docs/java/java-project">https://code.visualstudio.com/docs/java/java-project</a></p> |
 
 
-1.  Use the Liberty Dev Dashboard to **start** the Liberty Server in dev mode
+1.  Use the Liberty Dev Dashboard to **start** the Liberty Server in `dev` mode
     
     a.  In VS Code, expand the LIBERTY DEV DASHBOARD section
     
@@ -919,7 +919,7 @@ debugging</span>**
 
     <br/>
 
-10. Use the Liberty Dev Dashboard to **STOP** the Liberty Server in dev mode
+10. Use the Liberty Dev Dashboard to **STOP** the Liberty Server in `dev` mode
     
     a. In VS Code, switch back to the **Explorer** view
     
