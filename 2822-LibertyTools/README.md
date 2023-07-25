@@ -103,34 +103,18 @@ The lab environment contains one Linux VM named **Workstation**.
 
 1.  Access the lab environment from your web browser. 
     
-    A `Published Service` is configured to provide access to the **Workstation** VM through the noVNC interface for the lab environment.
+    On the **Workstation** tile, click the **ubuntu** screen logo to open the lab environment. 
     
-    a. When the demo environment is provisioned, click on the **environment tile** to open its details view. 
+    ![](./images/media/TechZoneWorstationLogin.png)
+    
 
-    b. Click on the **Published Service** link which will display a **Directory listing**  
+2.  Log in with user ID `ibmdemo` and password `passw0rd`.
     
-    c. Click on the **"vnc.html"** link to open the lab environment through the **noVNC** interface. 
-    
-    ![](./images/media/vnc-link.png)
-    
-    d. Click the **Connect** button 
-    
-      ![](./images/media/vnc-connect.png)
-
-    d. Enter the password as:  **passw0rd**. Then click the **Send Credentials** button to access the lab environment. 
-
-    > Note: That is a numeric zero in passw0rd  
-
-      ![](./images/media/vnc-password.png)
-
-2. Login with **ibmdemo** ID.
-    
-    a.  Click on the “**ibmdemo**” icon on the Ubuntu screen.
+    a.  Click the “**ibmdemo**” icon on the Ubuntu screen.
 
       ![](./images/media/image11.png)
 
-    b. When prompted for the password for “**ibmdemo**” user, enter
-    “**passw0rd**” as the password:
+    b. Enter `passw0rd` for the password.
 
     Password: **passw0rd** (lowercase with a zero instead of the o)
  
