@@ -91,10 +91,8 @@ The following commands can be selected from the drop-down menu after right-click
 An environment is provisioned for you for this lab session. The instructor or lab proctor can provide details for accessing the lab environment.
 
 The lab environment contains one Linux VM named **Workstation**.
-
-  ![](./images/media/TechZoneWorkstationLogin.png)
     
-  The Ubuntu Linux **Workstation** VM is installed with the following softare for the lab session:
+The Ubuntu Linux **Workstation** VM is installed with the following softare for the lab session:
   
   - Application Project with Liberty
   - Maven 3.6.0 
@@ -105,51 +103,45 @@ The lab environment contains one Linux VM named **Workstation**.
     
     On the **Workstation** tile, click the **ubuntu** screen logo to open the lab environment. 
     
-    ![](./images/media/TechZoneWorstationLogin.png)
+    ![](./images/media/TechZoneWorkstationLogin.png)
     
 
 2.  Log in with user ID `ibmdemo` and password `passw0rd`.
     
     a.  Click the “**ibmdemo**” icon on the Ubuntu screen.
 
-      ![](./images/media/image11.png)
+      ![](./images/media/ibmDemoLogin.png)
 
     b. Enter `passw0rd` for the password.
 
     Password: **passw0rd** (lowercase with a zero instead of the o)
  
-      ![](./images/media/image12.png)
+      ![](./images/media/ibmDemoPassword.png)
 
     <br/>
 	
-3.  Once you access the **Student VM** through the published service, you will see the Desktop, which contains all the programs that you will be using (browsers, terminal, etc.)
+3.  The desktop opens, which contains all the programs that you use (web browser, terminal) during the session.
 
 |         |           |  
 | ------------- |:-------------|
-| ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>IMPORTANT:</strong></p><p>Using the lab environment provided, all the required VS code extensions and dependencies have been installed for you.</p><p>This allows you to focus on the value of using the capabilities of the tools for fast, efficient inner-loop development, test, debug, of Java based applications and Microservices using Open Liberty in `dev` mode.</p></p> |
+| ![](./images/media/image8.png?cropResize=100,100)   | <p><strong>IMPORTANT:</strong></p><p>All required VS Code extensions and dependencies are installed for you.</p><p>This allows you to focus on using the tools for fast, efficient inner-loop development, test and debug of Java-based applications and Microservices by using Open Liberty in `dev` mode.</p></p> |
   <br/>
 
 
 ## Tips for working in the lab environment     
 
-1. You can resize the viewable area using the **noVNC Settings** options to resize the virtual desktop to fit your screen.
+1. The UI allows you to fit the viewing area to fit the browser window size that you are using.
 
-    a. From the environemnt VM, click on the **twisty** on the noNC control pane to open the menu.  
-
-    ![fit to window](./images/media/z-twisty.png)
-
-    b. To increase the visible area, click on `Settings > Scaling Mode` and set the value to `Remote Resizing`
-      
-     ![fit to window](./images/media/z-remote-resize.png)
+    ![fit to window](./images/media/FitToWindow.png)
 
 
-2.  You can copy / paste text from the lab guide into the lab environment using the clipboard in the noVNC viewer. 
+2.  You can copy and paste text from the lab guide into the lab environment by using the clipboard in the noVNC viewer. 
    
     a. Copy the text from the lab guide that you want to paste into the lab environment
     
     b. Click the **Clipboard** icon and **paste** the text into the noVNC clipboard
 
-    ![fit to window](./images/media/paste.png)
+    ![fit to window](./images/media/CopyPaste.png)
     
     c. Paste the text into the VM, such as to a terminal window, browser window, etc. 
 
