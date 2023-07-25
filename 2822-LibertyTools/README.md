@@ -92,7 +92,7 @@ An environment is provisioned for you for this lab session. The instructor or la
 
 The lab environment contains one Linux VM named **Workstation**.
 
-  ![](./images/media/workstation.png)
+  ![](./images/media/TechZoneWorkstationLogin.png)
     
   The Ubuntu Linux **Workstation** VM is installed with the following softare for the lab session:
   
