@@ -1,4 +1,4 @@
-# Lab: Using Open Liberty Tools with VS Code
+# Lab Session 2822: Fast iterative development and modern cloud-native Java developer experience with Liberty Tools
 
 ## Objectives
 
