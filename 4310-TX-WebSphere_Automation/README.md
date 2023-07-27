@@ -1,4 +1,3 @@
-# WebSphere proactive CVE protection and memory leak remediation observed by Instana 
 
 ![banner](./lab1-media/media/image1.jpeg)
 
