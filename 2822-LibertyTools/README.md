@@ -42,7 +42,7 @@ The Liberty Tools for VS Code extension contains the following key Features:
 
 The Liberty Tools for VS Code extension depends on the **Tools for MicroProfile** VS Code extension to support the development of MicroProfile-based microservices.
 
-The **Tools for MicroProfile** VS Code extension has the following dependencies:
+The Tools for MicroProfile VS Code extension has the following dependencies:
 
   - Java JDK (or JRE) 11 or later
 
@@ -88,7 +88,7 @@ The Ubuntu Linux **Workstation** VM is installed with the following softare for 
     
     a.  Click **ibmdemo** on the log in screen.
 
-    <img src="./images/media/ibmDemoLogin.png" width="200"/>
+    <img src="./images/media/ibmDemoLogin.png" width="250"/>
 
     b. Enter `passw0rd` for the password, all lowercase with a `0` (zero) instead of the letter 'o'.
  
@@ -131,7 +131,7 @@ The Ubuntu Linux **Workstation** VM is installed with the following softare for 
 
         code .
 
-    The VS Code UI launches and displays the **Explorer** view. The **START** folder contains the source code for the project.
+    The VS Code UI launches and displays the **EXPLORER** view. The **START** folder contains the source code for the project.
 
     <img src="./images/media/ExplorerStart.png" width="200"/>
     
@@ -161,7 +161,7 @@ The Ubuntu Linux **Workstation** VM is installed with the following softare for 
     <img src="./images/media/Requirements.png" width="400"/>
 
 
-4.  Close the **Liberty Tools Extension** details page (click the **X** on the tab).
+4.  Close the **Liberty Tools Extension** details tab (click the **X**).
 
 ### 2.2 Review the `pom.xml` file for the `system` microservice
 
@@ -181,17 +181,17 @@ The sample application that is used in this exercise is built by using Maven. Ev
 
     ![](./images/media/image23.png)
     
-    a.  Note the binary packaging of the Java application WAR file that
+    a.  Notice the binary packaging of the Java application WAR file that
         is produced from the Maven Build. The WAR file is named `guide-getting-started` version `1.0-SNAPSHOT`.
         
     ![](./images/media/image24.png)
     
-    b.  Default HTTP and HTTPS Ports are defined, and substituted into
+    b.  Notice the default HTTP and HTTPS Ports that are defined, and substituted into
         the `server.xml` file
         
     ![](./images/media/image25.png)
     
-    c.  The Liberty Tools Plugin is enabled, with a supported version of 3.3.4.
+    c.  Notice that the Liberty Tools Plugin is enabled, with a supported version of 3.3.4.
         
     ![](./images/media/image26.png)
     
@@ -232,11 +232,11 @@ In this lab environment, the workspace is already configured to use Standard mod
         
     <img src="./images/media/LibDashRClickStart.jpg" width="300"/>
     
-    c.  The **TERMINAL** view opens in VS Code that displays the server log messages as the server starts. When the following message appears, the Liberty server is started.
+    c.  The **TERMINAL** view opens in VS Code, which displays the server log messages as the server starts. When the following message appears, the Liberty server is started.
         
     ![](./images/media/image29.png)
 
-2.  View the `system` sample application in a web browser.
+2.  View the System Properties sample application in a web browser.
     
     a.  Open a web browser in the VM.
     
@@ -247,7 +247,7 @@ In this lab environment, the workspace is already configured to use Standard mod
     c. Close the browser window. 
 
 
-### 3.2 Implement a health check in an application 
+### 3.2 Implement a health check in the application 
 
 The System Properties sample application is now running in the Liberty server. Next, you implement a health check for the application.
 
@@ -259,7 +259,7 @@ The `mpHealth-2.2` feature provides a `/health` endpoint that represents a binar
 
 1.  Update the Liberty server configuration file (`server.xml`) to include the `mpHealth-2.2` feature to begin implementing the health checks for the application.
     
-    a.  In the VS Code Explorer view, expand **START** > **src** > **main** > **liberty/config**.
+    a.  In the VS Code **EXPLORER** view, expand **START >  src > main > liberty/config**.
     
     b.  Click `server.xml` to open the file in the editor pane.
         
@@ -273,7 +273,7 @@ The `mpHealth-2.2` feature provides a `/health` endpoint that represents a binar
 
 2.  Save and close the `server.xml` file. 
 
-    a. In the main VS Code menu, click File and select **Save**.
+    a. In the main VS Code menu, click **File** and select **Save**.
 
     b. Click the **X** on the tab in the editor to close the file. 
     
@@ -307,7 +307,7 @@ The `mpHealth-2.2` feature provides a `/health` endpoint that represents a binar
 
 6.  Review the `SystemReadinessCheck.java` implementation.
     
-    a.  Return to the VS Code **Explorer** view.
+    a.  Return to the VS Code **EXPLORER** view.
     
     b.  Expand **START > main > java/io/openliberty/sample/system**.
     
@@ -341,9 +341,9 @@ The `mpHealth-2.2` feature provides a `/health` endpoint that represents a binar
 
 9.  Review the `SystemLivenessCheck.java` implementation.
     
-    a.  Return to the VS Code **Explorer** view.
+    a.  Return to the VS Code **EXPLORER** view.
     
-    b.  Navigate to **START > main > java/io/openliberty/sample/system**.
+    b.  Expand **START > main > java/io/openliberty/sample/system**.
     
     c.  Click the `SystemLivenessCheck.java` file to open it in the editor pane.
         
@@ -369,7 +369,7 @@ The `mpHealth-2.2` feature provides a `/health` endpoint that represents a binar
 
 10. Modify the `inMaintenance` property in the `server.xml` file.
     
-    a.  Return to the VS Code console and go to **START > src > main > liberty/config**.
+    a.  Return to the VS Code **EXPLORER** view and expand **START > src > main > liberty/config**.
     
     b.  Click `server.xml` to open the file in the editor.
     
@@ -379,7 +379,7 @@ The `mpHealth-2.2` feature provides a `/health` endpoint that represents a binar
 
     d. Save the `server.xml` file. The server configuration is dynamically updated to reflect the change.  
 
-11. In the browser in the VM, view the `/health` endpoint again to view the health status of the application.
+11. In a browser in the VM, view the `/health` endpoint again to view the health status of the application.
 
         http://localhost:9080/health
 
@@ -424,7 +424,7 @@ Since you are purposely introducing this change, the test case must be updated t
 
 2.  Edit the `SystemResource.java` file.
     
-    a.  In VS Code **Explorer** view, expand **START > src > main > java/io/openliberty/sample/system**.
+    a.  In VS Code **EXPLORER** view, expand **START > src > main > java/io/openliberty/sample/system**.
     
     b.  Click `SystemResource.java` to open it in the editor.
         
@@ -469,8 +469,12 @@ Since you are purposely introducing this change, the test case must be updated t
     b.  Right-click the **guide-getting-started** Liberty server.
     
     c.  Select **View integration test report** from the menu.
+
+    <img src="./images/media/LibDashRClickMenuView.jpg" width="300"/>
+
+    The report displays in a new pane. 
         
-7.  View the test results in the **Failsafe Report** that displays in a new pane.
+7.  View the test results in the **Failsafe Report**.
            
     ![](./images/media/image52.png)
     
@@ -503,7 +507,7 @@ Since you are purposely introducing this change, the test case must be updated t
 
     d.  Save and close the file. The Liberty server and application are dynamically updated.
 
-9.  Rerun the tests by pressing the **ENTER** key in the **TERMINAL** view. 
+9.  Rerun the tests by pressing the **Enter** key with the cursor in the **TERMINAL** view. 
 
 ![](./images/media/image56.png)
 
@@ -524,24 +528,18 @@ Here are the basics steps for debugging:
 
 - Set a breakpoint in the source code
 
-- Add a “Java Attach” in the launch configuration and set the debug
-    port
+- Add a `Java Attach` in the launch configuration and set the debug port
 
-- Go to Debug view and select the “Attach” configuration
+- Go to **RUN AND DEBUG** view and select the **Attach** configuration
 
-- Click the Start debugging icon
+- Click the Start icon
 
 - Run the application in the Browser
 
-- The application stops at the breakpoint
+- Observe that the application stops at the breakpoint
 
-- Step through the app in debug mode to explore the variables and code
-    to resolve issues
-        
-In this section of the lab, you will use VS Code debugger to debug the Java application that is running on Liberty server.
-    
-  ![](./images/media/image57.png)
-    
+- Step through the application in debug mode to explore the variables and code to resolve issues
+                
 First, you set a breakpoint and debug the `SystemLivenessCheck.java` code that is executed when running the `/health` endpoint in the application.
 
 1.  Open the `SystemLivenessCheck.java` file in VS Code editor.
@@ -661,7 +659,7 @@ First, you set a breakpoint and debug the `SystemLivenessCheck.java` code that i
     
     d.  Select **Stop** from the menu to stop the server.
         
-    ![](./images/media/image74.png)
+    <img src="./images/media/LibDashRClickMenuStop.jpg" width="300"/>
 
     You see new messages in the **TERMINAL** view as the server stops.
 
