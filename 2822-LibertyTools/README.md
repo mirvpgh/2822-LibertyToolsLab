@@ -96,7 +96,7 @@ The Ubuntu Linux **Workstation** VM is installed with the following softare for 
 	
 3.  The desktop opens, which contains all the programs that you use (web browser, terminal, and so on) during the session.
 
-    <img src="./images/media/VMmenu.png" width="200"/>
+    <img src="./images/media/VMmenu1.jpg" width="200"/>
 
 >**IMPORTANT:** If, at any time during the lab, you are prompted to install updated software onto the VM, **DO NOT install the update**. Click **Cancel**. These lab instructions are intended for a specific version of software, which must not be udpated at this time.
 
@@ -131,9 +131,17 @@ The Ubuntu Linux **Workstation** VM is installed with the following softare for 
 
         code .
 
-    The VS Code UI launches and displays the **EXPLORER** view. The **START** folder contains the source code for the project.
+    The VS Code UI launches and displays the **EXPLORER** view. 
 
     <img src="./images/media/ExplorerStart.png" width="200"/>
+
+    You can change the view or perspective by clicking the icons on the left navigation menu. 
+
+    <img src="./images/media/LeftNavigationMenu.png" width="200"/>
+
+    >**Note:** Close any Pop-up boxes asking if you want to install extensions or switch views. You can ignore these prompts for the duration of the lab. 
+
+    ![](./images/media/image23.png)
     
 3.  Review the installed extensions in VS Code that are used for this lab.
     
@@ -169,20 +177,13 @@ The sample application that is used in this exercise is built by using Maven. Ev
     
 1.  Click the Explorer icon in the left navigation menu in VS Code.
 
-<img src="./images/media/ExplorerIcon.png" width="50"/>
+    <img src="./images/media/ExplorerIcon.png" width="50"/>
     
-2.  Expand the **START** folder.
+2.  Expand the **START** folder and click the `pom.xml` file to open it in the editor pane.
         
-    <img src="./images/media/StartExpanded.png" width="200"/>
+    <img src="./images/media/clickPomFile.png" width="400"/>
     
-3.  Click the `pom.xml` file to open it in the editor pane.
-    
-    >**Note:** Close any Pop-up boxes asking if you want to install extensions or switch views. You can ignore these prompts for the duration of the lab. 
-
-    ![](./images/media/image23.png)
-    
-    a.  Notice the binary packaging of the Java application WAR file that
-        is produced from the Maven Build. The WAR file is named `guide-getting-started` version `1.0-SNAPSHOT`.
+    a.  In the editor pane, notice the binary packaging of the Java application WAR file that is produced from the Maven Build. The WAR file is named `guide-getting-started` version `1.0-SNAPSHOT`.
         
     ![](./images/media/image24.png)
     
@@ -226,13 +227,13 @@ In this lab environment, the workspace is already configured to use Standard mod
 
 1.  Use the **LIBERTY DASHBOARD** to start the Liberty Server in `dev` mode.
     
-    a.  In VS Code, expand the **LIBERTY DASHBOARD** section.
+    a.  In the VS Code Explorer view, expand the **LIBERTY DASHBOARD** section.
     
-    b.  Right-click the **guide-getting-started** Liberty Server and select **Start** from the menu to start the server.
+    b.  Right-click **guide-getting-started** Liberty server and select **Start** from the menu to start the server.
         
     <img src="./images/media/LibDashRClickStart.jpg" width="300"/>
     
-    c.  The **TERMINAL** view opens in VS Code, which displays the server log messages as the server starts. When the following message appears, the Liberty server is started.
+    c.  The **TERMINAL** pane opens in VS Code, which displays the server log messages as the server starts. When the following message appears, the Liberty server is started.
         
     ![](./images/media/image29.png)
 
@@ -259,11 +260,15 @@ The `mpHealth-2.2` feature provides a `/health` endpoint that represents a binar
 
 1.  Update the Liberty server configuration file (`server.xml`) to include the `mpHealth-2.2` feature to begin implementing the health checks for the application.
     
-    a.  In the VS Code **EXPLORER** view, expand **START >  src > main > liberty/config**.
+    a.  In the VS Code Explorer view, expand **START >  src > main > liberty/config**.
     
     b.  Click `server.xml` to open the file in the editor pane.
         
     ![](./images/media/image31.png)
+
+    >**Hint:** To expand the viewing area for a folder, hover over the line until it turns blue, and then drag it down to expand the area.
+
+    <img src="./images/media/BlueLine.png" width="300"/>
     
     c.  Add the `mpHealth-2.2` feature to the `server.xml` file by inserting this line into the `<featureManager>` block:
 
@@ -289,7 +294,7 @@ The `mpHealth-2.2` feature provides a `/health` endpoint that represents a binar
 
         http://localhost:9080/health
 
-    ![](./images/media/image34.png)
+    <img src="./images/media/healthEndpoint1.png" width="300"/>
 
 > The basic health check provides a simple status that indicates if the service is running, but not if it is healthy. In the next steps, you implement a *liveness* check that implements logic that gathers memory and CPU usage information. If the system resources exceed a certain threshold, it reports the service as `DOWN` with the health check.
 
@@ -307,7 +312,7 @@ The `mpHealth-2.2` feature provides a `/health` endpoint that represents a binar
 
 6.  Review the `SystemReadinessCheck.java` implementation.
     
-    a.  Return to the VS Code **EXPLORER** view.
+    a.  Return to the VS Code Explorer view.
     
     b.  Expand **START > main > java/io/openliberty/sample/system**.
     
@@ -341,7 +346,7 @@ The `mpHealth-2.2` feature provides a `/health` endpoint that represents a binar
 
 9.  Review the `SystemLivenessCheck.java` implementation.
     
-    a.  Return to the VS Code **EXPLORER** view.
+    a.  Return to the VS Code Explorer view.
     
     b.  Expand **START > main > java/io/openliberty/sample/system**.
     
@@ -369,7 +374,7 @@ The `mpHealth-2.2` feature provides a `/health` endpoint that represents a binar
 
 10. Modify the `inMaintenance` property in the `server.xml` file.
     
-    a.  Return to the VS Code **EXPLORER** view and expand **START > src > main > liberty/config**.
+    a.  Return to the VS Code Explorer view and expand **START > src > main > liberty/config**.
     
     b.  Click `server.xml` to open the file in the editor.
     
@@ -416,7 +421,7 @@ Since you are purposely introducing this change, the test case must be updated t
         
     <img src="./images/media/LibDashRClickRunTests.jpg" width="300"/>
     
-    d.  In the **TERMINAL** view, you see the results of the tests. One test was executed, and one test PASSED.
+    d.  In the **TERMINAL** pane, you see the results of the tests. One test was executed, and one test PASSED.
         
     ![](./images/media/image45.png)
 
@@ -424,7 +429,7 @@ Since you are purposely introducing this change, the test case must be updated t
 
 2.  Edit the `SystemResource.java` file.
     
-    a.  In VS Code **EXPLORER** view, expand **START > src > main > java/io/openliberty/sample/system**.
+    a.  In the VS Code Explorer view, expand **START > src > main > java/io/openliberty/sample/system**.
     
     b.  Click `SystemResource.java` to open it in the editor.
         
@@ -458,13 +463,13 @@ Since you are purposely introducing this change, the test case must be updated t
         
     <img src="./images/media/LibDashRClickRunTests.jpg" width="300"/>
     
-    d.  Alternatively, you can run the tests by pressing the **ENTER** key while the cursor is in the **TERMINAL** view. 
+    d.  Alternatively, you can run the tests by pressing the **ENTER** key while the cursor is in the **TERMINAL** pane. 
 
     >Notice that the tests failed.
 
 6. Use the Liberty Dashboard to view the **integration test report**.
     
-    a.  In VS Code, expand **LIBERTY DASHBOARD**.
+    a.  In the VS Code Explorer view, expand **LIBERTY DASHBOARD**.
     
     b.  Right-click the **guide-getting-started** Liberty server.
     
@@ -472,7 +477,7 @@ Since you are purposely introducing this change, the test case must be updated t
 
     <img src="./images/media/LibDashRClickMenuView.jpg" width="300"/>
 
-    The report displays in a new pane. 
+    The report displays in a new pane in VS Code. 
         
 7.  View the test results in the **Failsafe Report**.
            
@@ -489,7 +494,7 @@ Since you are purposely introducing this change, the test case must be updated t
 
 8.  Modify the test case to invoke the updated path to the service.
     
-    a.  In the **EXPLORER** view in VS Code, expand **START > src > test/java/it/io/openliberty/sample**.
+    a.  In the Explorer view in VS Code, expand **START > src > test/java/it/io/openliberty/sample**.
 
     >**Note:** This is in the `test` branch of the project, not in `main`.
     
@@ -507,7 +512,7 @@ Since you are purposely introducing this change, the test case must be updated t
 
     d.  Save and close the file. The Liberty server and application are dynamically updated.
 
-9.  Rerun the tests by pressing the **Enter** key with the cursor in the **TERMINAL** view. 
+9.  Rerun the tests by pressing the **Enter** key with the cursor in the **TERMINAL** pane. 
 
 ![](./images/media/image56.png)
 
@@ -544,7 +549,7 @@ First, you set a breakpoint and debug the `SystemLivenessCheck.java` code that i
 
 1.  Open the `SystemLivenessCheck.java` file in VS Code editor.
     
-    a.  In VS Code **EXPLORER** view, expand **START > src > main > java/io/openliberty/sample/system**.
+    a.  In VS Code Explorer view, expand **START > src > main > java/io/openliberty/sample/system**.
     
     b.  Click `SystemLivenessCheck.java` to open it in the editor.
         
@@ -644,14 +649,13 @@ First, you set a breakpoint and debug the `SystemLivenessCheck.java` code that i
 
     b. Continue stepping through the code as you want.
 
-8.  When you are finished stepping through the code and exploring the local variables, click **Disconnect** in the toolbar to stop the debugger.
     
     ![](./images/media/image73.png)
 
 
 9. Use **LIBERTY DASHBOARD** to stop the Liberty server in `dev` mode.
     
-    a. In VS Code, switch back to the **EXPLORER** view.
+    a. In VS Code, switch back to the Explorer view.
     
     b.  Expand **LIBERTY DASHBOARD**.
     
@@ -661,7 +665,7 @@ First, you set a breakpoint and debug the `SystemLivenessCheck.java` code that i
         
     <img src="./images/media/LibDashRClickMenuStop.jpg" width="300"/>
 
-    You see new messages in the **TERMINAL** view as the server stops.
+    You see new messages in the **TERMINAL** pane as the server stops.
 
 10. In the main VS Code menu, click **File** and select **Exit** to exit the UI.
 
