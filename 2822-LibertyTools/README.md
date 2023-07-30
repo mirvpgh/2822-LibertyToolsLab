@@ -65,7 +65,7 @@ The **Liberty Maven Plugin** provides several goals for managing Liberty servers
 
 When the Liberty Maven Plugin is specified in your `pom.xml` file, your project name is then listed under the **LIBERTY DASHBOARD** in the side panel in VS Code, as shown in the screen capture. You can interact with `dev` mode by right-clicking your project name and selecting one of the commands that are supported by the Liberty Tools extension. The following commands can be selected from the drop-down menu after right-clicking your project name in the **LIBERTY DASHBOARD**:
 
-   <img src="./images/media/LibDashRClickMenu.png" width="300"/>
+<img src="./images/media/LibDashRClickMenu.png" width="300"/>
     
 ## 1.0 Accessing the lab environment
 
@@ -84,7 +84,7 @@ The Ubuntu Linux **Workstation** VM is installed with the following softare for 
     
     <img src="./images/media/TechZoneWorkstationLogin.png" width="150"/>
     
-2.  Log in with user ID `ibmdemo` and password `passw0rd`.
+2.  If prompted, log in with user ID `ibmdemo` and password `passw0rd`.
     
     a.  Click **ibmdemo** on the log in screen.
 
@@ -108,12 +108,14 @@ The Ubuntu Linux **Workstation** VM is installed with the following softare for 
 
     <img src="./images/media/FitToWindow.png" width="250"/>
 
-2.  You can copy and paste text from the lab guide into the lab environment by using **Send Text** clipboard. 
+2.  If, at any time, the UI becomes unresponsive to clicks or typing, click Reload to refresh the screen. 
+
+    <img src="./images/media/Reload.png" width="250"/>
+
+3. You can copy and paste text from the lab guide into the lab environment by using the **Send Text** clipboard, but pasting into a terminal window does not work. The text is distorted. 
    
     <img src="./images/media/CopyPaste.png" width="280"/>
     
-    > **NOTE:** Sometimes pasting into a terminal window in the VM does not work consistently. In this case, you can try pasting the text into a **Text Editor** in the VM, and then copy and paste into the terminal window. 
-
 ## 2.0 Getting Started with Liberty Tools in VS Code
 
 ### 2.1 Review the VS Code extensions for this project
@@ -135,14 +137,15 @@ The Ubuntu Linux **Workstation** VM is installed with the following softare for 
 
     <img src="./images/media/ExplorerStart.png" width="200"/>
 
-    You can change the view or perspective by clicking the icons on the left navigation menu. 
+    >**IMPORTANT:** Close any Pop-up boxes that might show up in the lower right corner asking if you want to update VS Code, install extensions or switch views. Click the **X** to close the pop-up box. Dismiss these prompts for the duration of the lab. 
+
+    <img src="./images/media/CloseUpdatePopup.jpg" width="400"/>
+
+    >**Hint:** You can change the view or perspective by clicking the icons on the left navigation menu. 
 
     <img src="./images/media/LeftNavigationMenu.png" width="200"/>
 
-    >**Note:** Close any Pop-up boxes asking if you want to install extensions or switch views. You can ignore these prompts for the duration of the lab. 
 
-    ![](./images/media/image23.png)
-    
 3.  Review the installed extensions in VS Code that are used for this lab.
     
     a.  Click the **Extensions** icon in the left navigation bar in
@@ -202,6 +205,8 @@ The sample application that is used in this exercise is built by using Maven. Ev
     
 4.  Close the `pom.xml` file (click the **X** on the tab).
 
+    <img src="./images/media/ClickXPomFile.png" width="400"/>
+
 >**Note:** You can find more information on the `liberty-maven-plugin` at: <a href="https://github.com/OpenLiberty/ci.maven">https://github.com/OpenLiberty/ci.maven</a>
 
 
@@ -240,6 +245,8 @@ In this lab environment, the workspace is already configured to use Standard mod
 2.  View the System Properties sample application in a web browser.
     
     a.  Open a web browser in the VM.
+
+    >**Note:** If prompted, **do not** update Chrome. 
     
     b.  Go to <http://localhost:9080> to verify that the application is running.
         
@@ -280,7 +287,11 @@ The `mpHealth-2.2` feature provides a `/health` endpoint that represents a binar
 
     a. In the main VS Code menu, click **File** and select **Save**.
 
+    <img src="./images/media/VSCodeFileSave.jpg" width="200"/>
+
     b. Click the **X** on the tab in the editor to close the file. 
+
+    <img src="./images/media/VSCodeCloseFile.png" width="400"/>
     
     > When you save the `server.xml` file, the server detects the configuration changes, and the server installs the new feature and updates the application.
 
@@ -308,20 +319,33 @@ The `mpHealth-2.2` feature provides a `/health` endpoint that represents a binar
 
         cp /home/ibmdemo/Student/labs/devmode/guide-getting-started/finish/src/main/java/io/openliberty/sample/system/SystemReadinessCheck.java /home/ibmdemo/Student/labs/devmode/guide-getting-started/start/src/main/java/io/openliberty/sample/system/SystemReadinessCheck.java
 
-    >**Note:** For the purpose of this lab, the `cp` command above copies a fully implemented readiness check from the `finished` project into the current working project (`start`). If you have difficulty copying and pasting the command in a terminal window, you can try copying the file by using the GUI **Files** application in the VM. 
+    >**Note:** For the purpose of this lab, the `cp` command above copies a fully implemented readiness check from the `finish` project into the current working project (`start`). 
+    
+    >**Hint:** Alternatively, you can copy the file by using the GUI **Files** application in the VM. Click the Files icon and navigate to the `/home/ibmdemo/Student/labs/devmode/guide-getting-started/finish/src/main/java/io/openliberty/sample/system` folder.    
+    ><img src="./images/media/FilesIcon.png" width="50"/>
+    
+    >Right-click the `SystemReadinessCheck.java` file and select **Copy to...**.    
+    ><img src="./images/media/CopyTo.png" width="400"/>    
+    
+    >In the next window, navigate to `/home/ibmdemo/Student/labs/devmode/guide-getting-started/start/src/main/java/io/openliberty/sample/system/` and click **Select**. 
+    <img src="./images/media/CopyToSelect.png" width="400"/>
+
+    >The file is copied to the folder. 
 
 6.  Review the `SystemReadinessCheck.java` implementation.
     
     a.  Return to the VS Code Explorer view.
     
-    b.  Expand **START > main > java/io/openliberty/sample/system**.
+    b.  Expand **START > src > main > java/io/openliberty > sample/system**.
     
     c.  Click the `SystemReadinessCheck.java` file to open it in the editor pane.
         
-    ![](./images/media/image36.png)
+    <img src="./images/media/ClickSysReadyCheck.png" width="300"/>
         
     The system readiness check evaluates the `inMaintenance` config property, which is implemented by using the `mpConfig` MicroProfile feature, and configured in the Liberty `server.xml` file.
-    
+
+    <img src="./images/media/InMaintenance.png" width="500"/>
+
     - If the `inMaintenance` property is set to `false`, the readiness check sets the health status to `UP`.
     
     - If the `inMaintenance` property is set to `true` the status is set to `DOWN`.
@@ -342,13 +366,15 @@ The `mpHealth-2.2` feature provides a `/health` endpoint that represents a binar
 
         cp /home/ibmdemo/Student/labs/devmode/guide-getting-started/finish/src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java /home/ibmdemo/Student/labs/devmode/guide-getting-started/start/src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java
 
-    >**Note:** For the purpose of this lab, the `cp` command above copies a fully implemented liveness check from the `finished` project into the current working project (`start`). If you have difficulty copying and pasting the command in a terminal window, you can try copying the file by using the GUI **Files** application in the VM. 
+    >**Note:** For the purpose of this lab, the `cp` command above copies a fully implemented liveness check from the `finish` project into the current working project (`start`). 
+    
+    >**Hint:** Alternatively, you can copy the file by using the GUI **Files** application in the VM, as you did in a previous step.
 
 9.  Review the `SystemLivenessCheck.java` implementation.
     
     a.  Return to the VS Code Explorer view.
     
-    b.  Expand **START > main > java/io/openliberty/sample/system**.
+    b.  Expand **START > src > main > java/io/openliberty > sample/system**.
     
     c.  Click the `SystemLivenessCheck.java` file to open it in the editor pane.
         
@@ -395,7 +421,11 @@ The `mpHealth-2.2` feature provides a `/health` endpoint that represents a binar
     ![](./images/media/image42.png)
 
 13. Save and close the `server.xml` file.
-         
+
+    a. In the main VS Code menu, click **File** and select **Save**.
+
+    b. Click the **X** on the tab in the editor to close the file. 
+
 14. View the `/health` endpoint again to verify that the service is now marked `UP`.
     
 <img src="./images/media/Health2Up.png" width="300"/>
