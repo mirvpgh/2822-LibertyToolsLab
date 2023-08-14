@@ -1,4 +1,4 @@
-![TechXchange banner](https://github.com/mirvpgh/TechXChange2023Labs/blob/main/2822-LibertyTools/images/media/TechXchangeBanner.jpeg)
+![TechXchange banner](./images/media/TechXchangeBanner.jpeg)
 
 # 2822: Streamlining Cloud-Native Java Development with Liberty Tools
 
