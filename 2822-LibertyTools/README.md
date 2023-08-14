@@ -1,4 +1,6 @@
-# 2822: Fast iterative development and modern cloud-native Java developer experience with Liberty Tools
+![TechXchange banner](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+# 2822: Streamlining Cloud-Native Java Development with Liberty Tools
 
 **Duration:** 90 minutes
 
