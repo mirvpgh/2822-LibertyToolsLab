@@ -26,7 +26,7 @@ At the end of this session you should be able to:
 The lab environment for this session is installed and configured with all the prerequisite software.
 
 ## Introduction: Liberty Tools extension for VS Code
-In this lab session, you use the **Liberty Tools** extension to in VS Code to run tests on demand so that you can get immediate feedback on your changes. You also work with integrated debugging tools and attach a Java debugger to debug your running application.
+In this lab session, you use the **Liberty Tools** extension in VS Code to run tests on demand so that you can get immediate feedback on your changes. You also work with integrated debugging tools and attach a Java debugger to debug your running application.
 
 The Liberty Tools for VS Code extension contains the following key Features:
 
@@ -114,10 +114,16 @@ The Ubuntu Linux **Workstation** VM is installed with the following softare for 
 
     <img src="./images/media/Reload.png" width="250"/>
 
-3. You can copy and paste text from the lab guide into the lab environment by using the **Send Text** clipboard, but pasting into a terminal window does not work. The text is distorted. 
+3. You can copy and paste text from the lab guide into the lab environment by using the **Send Text** clipboard, but pasting into a terminal window does not work. The text becomes distorted. Instead, type commands directly into the terminal window, or copy and paste commands from a local text file.
    
     <img src="./images/media/CopyPaste.png" width="280"/>
-    
+
+4. Download the `Commands.txt` file from [2822-LibertyTools/Commands.txt](https://github.com/mirvpgh/TechXChange2023Labs/blob/main/2822-LibertyTools/Commands.txt) to your **Workstation** lab environment.
+   a. Open a browser window in your **Workstation** lab environment and go to https://github.com/mirvpgh/TechXChange2023Labs/blob/main/2822-LibertyTools/Commands.txt.
+   b. Click the Download icon and choose a local directory, or save the file to the desktop.
+   
+    <img src="./images/media/DownloadCommandsTxt.png" width="400"/>
+
 ## 2.0 Getting Started with Liberty Tools in VS Code
 
 ### 2.1 Review the VS Code extensions for this project
