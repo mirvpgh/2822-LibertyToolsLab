@@ -119,7 +119,9 @@ The Ubuntu Linux **Workstation** VM is installed with the following softare for 
     <img src="./images/media/CopyPaste.png" width="280"/>
 
 4. Download the `Commands.txt` file from [2822-LibertyTools/Commands.txt](https://github.com/mirvpgh/TechXChange2023Labs/blob/main/2822-LibertyTools/Commands.txt) to your **Workstation** lab environment.
+
    a. Open a browser window in your **Workstation** lab environment and go to https://github.com/mirvpgh/TechXChange2023Labs/blob/main/2822-LibertyTools/Commands.txt.
+
    b. Click the Download icon and choose a local directory, or save the file to the desktop.
    
     <img src="./images/media/DownloadCommandsTxt.png" width="400"/>
