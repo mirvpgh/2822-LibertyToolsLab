@@ -71,6 +71,8 @@ When the Liberty Maven Plugin is specified in your `pom.xml` file, your project 
     
 ## 1.0 Accessing the lab environment
 
+### 1.1 Launch Workstation
+
 An environment is provisioned for you for this lab session. The instructor or lab proctor can provide details for accessing the lab environment.
 
 The lab environment contains one Linux VM named **Workstation**.
@@ -104,7 +106,7 @@ The Ubuntu Linux **Workstation** VM is installed with the following softare for 
 
 <img src="./images/media/CancelUpdate.png" width="400"/>
 
-### Tips for working in the lab environment     
+### 1.2 Tips for working in the lab environment     
 
 1. The UI allows you to fit the viewing area to fit the browser window size that you are using.
 
@@ -120,9 +122,9 @@ The Ubuntu Linux **Workstation** VM is installed with the following softare for 
 
 4. Download the `Commands.txt` file from [2822-LibertyTools/Commands.txt](https://github.com/mirvpgh/TechXChange2023Labs/blob/main/2822-LibertyTools/Commands.txt) to your **Workstation** lab environment.
 
-   a. Open a browser window in your **Workstation** lab environment and go to https://github.com/mirvpgh/TechXChange2023Labs/blob/main/2822-LibertyTools/Commands.txt.
+    a. Open a browser window in your **Workstation** lab environment and go to https://github.com/mirvpgh/TechXChange2023Labs/blob/main/2822-LibertyTools/Commands.txt.
 
-   b. Click the Download icon and choose a local directory, or save the file to the desktop.
+    b. Click the Download icon and choose a local directory, or save the file to the desktop.
    
     <img src="./images/media/DownloadCommandsTxt.png" width="400"/>
 
@@ -329,7 +331,7 @@ The `mpHealth-2.2` feature provides a `/health` endpoint that represents a binar
 
         cp /home/ibmdemo/Student/labs/devmode/guide-getting-started/finish/src/main/java/io/openliberty/sample/system/SystemReadinessCheck.java /home/ibmdemo/Student/labs/devmode/guide-getting-started/start/src/main/java/io/openliberty/sample/system/SystemReadinessCheck.java
 
-    >**Note:** For the purpose of this lab, the `cp` command above copies a fully implemented readiness check from the `finish` project into the current working project (`start`). 
+    >**Note:** For the purpose of this lab, the `cp` command above copies a fully implemented readiness check from the `finish` project into the current working project (`start`). You can cut and paste this command from the `Commands.txt` file that you downloaded from https://github.com/mirvpgh/TechXChange2023Labs/blob/main/2822-LibertyTools/Commands.txt. 
     
     >**Hint:** Alternatively, you can copy the file by using the GUI **Files** application in the VM. Click the Files icon and navigate to the `/home/ibmdemo/Student/labs/devmode/guide-getting-started/finish/src/main/java/io/openliberty/sample/system` folder.    
     ><img src="./images/media/FilesIcon.png" width="50"/>
@@ -376,7 +378,7 @@ The `mpHealth-2.2` feature provides a `/health` endpoint that represents a binar
 
         cp /home/ibmdemo/Student/labs/devmode/guide-getting-started/finish/src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java /home/ibmdemo/Student/labs/devmode/guide-getting-started/start/src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java
 
-    >**Note:** For the purpose of this lab, the `cp` command above copies a fully implemented liveness check from the `finish` project into the current working project (`start`). 
+    >**Note:** For the purpose of this lab, the `cp` command above copies a fully implemented liveness check from the `finish` project into the current working project (`start`). You can cut and paste this command from the `Commands.txt` file that you downloaded from https://github.com/mirvpgh/TechXChange2023Labs/blob/main/2822-LibertyTools/Commands.txt. 
     
     >**Hint:** Alternatively, you can copy the file by using the GUI **Files** application in the VM, as you did in a previous step.
 
